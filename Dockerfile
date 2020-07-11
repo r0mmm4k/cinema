@@ -4,6 +4,10 @@ FROM node:13-alpine
 # use app as the working directory
 WORKDIR /app
 
+ARG REACT_APP_API_SECRET
+
+ENV REACT_APP_API_SECRET=$REACT_APP_API_SECRET
+
 # Copy the files from the current directory to app
 COPY . /app
 
