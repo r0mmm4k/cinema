@@ -182,16 +182,6 @@ workflows:
                 - develop
                 - staging
                 - master
-      - unit-test:
-          requires:
-            - linting
-            - prettier
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
       - publish-to-docker-hub:
           requires:
             - unit-test
