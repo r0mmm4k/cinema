@@ -184,7 +184,8 @@ workflows:
                 - master
       - publish-to-docker-hub:
           requires:
-            - unit-test
+            - linting
+            - prettier
           filters:
             branches:
               only:
